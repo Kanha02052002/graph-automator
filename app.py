@@ -9,6 +9,9 @@ messages = [
     "Optimize function", "Enhance performance", "Patch update", "Typo fix", "Stable release"
 ]
 
+MIN_COUNT=0
+MAX_COUNT=20
+
 # ✅ Add a parameter here
 def run_git_command(cmd):
     try:
@@ -17,7 +20,8 @@ def run_git_command(cmd):
     except subprocess.CalledProcessError as e:
         return e.stderr.strip(), "Failed"
 
-while True:
+while MIN_COUNT<=MAX_COUNT:
+    MIN_COUNT+=1
     message=random.choice(messages)
     timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -31,4 +35,4 @@ while True:
         log.write(f"Add Status: {status_add}, Commit Status: {status_commit}, Push Status: {status_push}\n")
         log.write("-" * 50 + "\n")
 
-    time.sleep(300)  # 5 minutes
+    time.sleep(30)  # 5 minutes
