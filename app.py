@@ -22,6 +22,7 @@ def run_git_command(cmd):
 
 while MIN_COUNT<=MAX_COUNT:
     MIN_COUNT+=1
+    print(f"Commit number: {MIN_COUNT}")
     message=random.choice(messages)
     timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
