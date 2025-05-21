@@ -35,4 +35,4 @@ while MIN_COUNT<=MAX_COUNT:
         log.write(f"Add Status: {status_add}, Commit Status: {status_commit}, Push Status: {status_push}\n")
         log.write("-" * 50 + "\n")
 
-    time.sleep(30)  # 5 minutes
+    time.sleep(30)  
